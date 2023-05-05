@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width' , initial-scale='1'>
+
+    <!-- Bootstrap CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
+
+    <title>All Torrents</title>
+</head>
+
+<body>
+
+    <h1 class="text-center my-4">All Torrents</h1>
+    <div class="container">
+        <div class="d-flex justify-content-between items-center mb-3">
+            <h5 class="col-sm-4 col-12" id="results">
+            </h5>
+            <div class="col-sm-8 col-12 d-flex justify-content-end">
+                <input class="form-control" style="background: #dddddd38;width: 320px;" type="text"
+                    placeholder="Search a movie" id="searchInput" autofocus="true" autocomplete="off">
+                <button class="btn btn-primary ms-2" onclick="search()">Search</button>
+            </div>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Seeders</th>
+                    <th scope="col">Leechers</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Uploader</th>
+                </tr>
+            </thead>
+            <tbody id="appendDataToTableBody" class="d-none"></tbody>
+        </table>
+        <div id="loading">
+            <h1 class="font-bold text-center my-5 py-5 d-block ">LOADING ...</h1>
+        </div>
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'>
+        </script>
+    <script src="./all.data.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
