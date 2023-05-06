@@ -50,7 +50,7 @@ for x in range(0,151):
         with open(f'{title_page}.json', 'a') as f:
             json.dump(results, f)
             f.write('\n')
-    time.sleep(2)
+        time.sleep(2)
     except Exception as e:
         print('Error on page ...', x, e)
         with open(f'error-{i}-{x}.html', 'a') as f:
