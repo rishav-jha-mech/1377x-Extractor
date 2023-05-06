@@ -123,4 +123,5 @@ def extractDataList(range, option, optionName):
             ) as f:
                 f.write(soup.prettify())
             continue
+    postProcessToJson(FILE_NAME)
     print("\nData scraping completed\n")
