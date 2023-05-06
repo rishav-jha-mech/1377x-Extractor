@@ -1,2 +1,6 @@
 *data.js
 *.json
+__pycache__/
+errors/
+outputs/
+database/

@@ -4,7 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 from options import subDataOptions, dataListOptions
 from crawler import extractSubData, extractDataList
-from utils import get_key_from_value, sanitize_filename
+from utils import get_key_from_value, sanitize_filename, checkAndCreateFolder
+from vars import OUTPUT_FOLDER, ERRORS_FOLDER
 
 
 def main():
@@ -14,7 +15,8 @@ This is a simple web scraper for 1337x.to
 Please select an option:
 1. Extract sub data from a list of pages
 2. Extract data from a list of pages\n"""))
-
+    checkAndCreateFolder(OUTPUT_FOLDER)
+    checkAndCreateFolder(ERRORS_FOLDER)
     if opt == 1:
         try:
             optionNo = int(
