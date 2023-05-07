@@ -109,8 +109,8 @@ def extractDataList(range, option, optionName):
             if results == []:
                 print("No data found on page ...", page)
                 continue
-
-            with open(f"{OUTPUT_FOLDER}{sanitize_filename(optionName)}.json", "a") as f:
+            FILE_NAME = f"{OUTPUT_FOLDER}{sanitize_filename(optionName)}.json",
+            with open(FILE_NAME, "a") as f:
                 json.dump(results, f)
                 f.write("\n")
             time.sleep(SLEEP_TIME)
